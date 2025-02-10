@@ -5,6 +5,14 @@ VisualStudioVersion = 17.12.35521.163 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greeter", "Greeter\Greeter.csproj", "{25558FC9-E80B-4DA5-8D34-2C3887DAEF65}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M001-Vorstellung", "M001-Vorstellung", "{B6E1FE27-8663-4EA8-B3F6-BA2B425C8364}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M002-Konfiguration", "M002-Konfiguration", "{72AFD062-B3D3-4BEA-8A69-542F4CC1E79A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloIoC", "HelloIoC\HelloIoC.csproj", "{5E145CFF-862E-4EE2-B0A7-97E28A41CB41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloLogging", "HelloLogging\HelloLogging.csproj", "{0595EE73-9FD7-4026-9E1B-549817CA47BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +23,21 @@ Global
 		{25558FC9-E80B-4DA5-8D34-2C3887DAEF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25558FC9-E80B-4DA5-8D34-2C3887DAEF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25558FC9-E80B-4DA5-8D34-2C3887DAEF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E145CFF-862E-4EE2-B0A7-97E28A41CB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E145CFF-862E-4EE2-B0A7-97E28A41CB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E145CFF-862E-4EE2-B0A7-97E28A41CB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E145CFF-862E-4EE2-B0A7-97E28A41CB41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0595EE73-9FD7-4026-9E1B-549817CA47BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0595EE73-9FD7-4026-9E1B-549817CA47BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0595EE73-9FD7-4026-9E1B-549817CA47BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0595EE73-9FD7-4026-9E1B-549817CA47BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25558FC9-E80B-4DA5-8D34-2C3887DAEF65} = {B6E1FE27-8663-4EA8-B3F6-BA2B425C8364}
+		{5E145CFF-862E-4EE2-B0A7-97E28A41CB41} = {72AFD062-B3D3-4BEA-8A69-542F4CC1E79A}
+		{0595EE73-9FD7-4026-9E1B-549817CA47BC} = {72AFD062-B3D3-4BEA-8A69-542F4CC1E79A}
 	EndGlobalSection
 EndGlobal

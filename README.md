@@ -10,9 +10,9 @@ Kurs Repository zum Kurs ASP.NET Core Grundkurs der ppedv AG.
 
 ## M002 | Konfiguration
 
--   [ ] IOC mittels Dependency Injection
--   [ ] Aufbau appsettings.json
--   [ ] Logging in ASP.NET Core
+-   [x] IOC mittels Dependency Injection
+-   [x] Aufbau appsettings.json
+-   [x] Logging in ASP.NET Core
 
 ## M003 | Model View Controller (MVC)
 
