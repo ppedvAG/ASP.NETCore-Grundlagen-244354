@@ -10,10 +10,12 @@ namespace DemoMvcApp.Controllers
     public class RecipesController : Controller
     {
         private readonly IRecipeService recipeService;
+        private readonly ILogger<RecipesController> logger;
 
-        public RecipesController(IRecipeService recipeService)
+        public RecipesController(IRecipeService recipeService, ILogger<RecipesController> logger)
         {
             this.recipeService = recipeService;
+            this.logger = logger;
         }
 
         // GET: RecipesController
@@ -33,22 +35,34 @@ namespace DemoMvcApp.Controllers
         // GET: RecipesController/Create
         public ActionResult Create()
         {
-            return View(new RecipesViewModel());
+            return View(new CreateRecipesViewModel());
         }
 
         // POST: RecipesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(CreateRecipesViewModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    recipeService.Add(model.ToDomainModel());
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError(ex, ex.Message);
+                    ModelState.AddModelError(string.Empty, ex.Message);
+                }
             }
-            catch
+            else
             {
-                return View();
+                var errors = ModelState.Values.SelectMany(e => e.Errors).Select(e => e.ErrorMessage);
+                ModelState.AddModelError(string.Empty, string.Join(Environment.NewLine, errors));
             }
+
+            return View(model);
         }
 
         // GET: RecipesController/Edit/5

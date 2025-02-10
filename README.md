@@ -29,8 +29,8 @@ Kurs Repository zum Kurs ASP.NET Core Grundkurs der ppedv AG.
 ## M005 | Forms und Validierung
 
 -   [x] ViewModel Mapping
--   [ ] Form Post & Validierung
--   [ ] ModelState
+-   [x] Form Post & Validierung
+-   [x] ModelState
 
 ## M006 | FileServer erstellen
 
