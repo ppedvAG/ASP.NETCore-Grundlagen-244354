@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessModel", "BusinessMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessModel.Tests", "BusinessModel.Tests\BusinessModel.Tests.csproj", "{B949C2B9-6085-40BF-95C0-DF2C892B0661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMvcApp", "DemoMvcApp\DemoMvcApp.csproj", "{57A11939-D17D-4436-99C0-EB36F79A52CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B949C2B9-6085-40BF-95C0-DF2C892B0661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B949C2B9-6085-40BF-95C0-DF2C892B0661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B949C2B9-6085-40BF-95C0-DF2C892B0661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A11939-D17D-4436-99C0-EB36F79A52CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A11939-D17D-4436-99C0-EB36F79A52CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A11939-D17D-4436-99C0-EB36F79A52CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A11939-D17D-4436-99C0-EB36F79A52CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
