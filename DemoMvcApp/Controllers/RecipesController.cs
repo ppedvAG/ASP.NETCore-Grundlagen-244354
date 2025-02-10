@@ -1,5 +1,7 @@
 ﻿using BusinessModel.Contracts;
 using BusinessModel.Models;
+using DemoMvcApp.Mappers;
+using DemoMvcApp.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,23 +17,23 @@ namespace DemoMvcApp.Controllers
         }
 
         // GET: RecipesController
-        public ActionResult Index()
+        public ActionResult<IEnumerable<RecipesViewModel>> Index()
         {
-            var model = recipeService.GetAll();
+            var model = recipeService.GetAll().Select(e => e.ToViewModel());
             return View(model.Take(10));
         }
 
         // GET: RecipesController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult<RecipesViewModel> Details(int id)
         {
             var model = recipeService.GetById(id);
-            return View(model);
+            return View(model?.ToViewModel());
         }
 
         // GET: RecipesController/Create
         public ActionResult Create()
         {
-            return View(new Recipe());
+            return View(new RecipesViewModel());
         }
 
         // POST: RecipesController/Create
