@@ -1,0 +1,61 @@
+﻿@using MovieStore.Models
+@model IEnumerable<Movie>
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1em;
+    }
+
+    .header {
+        font-weight: bold;
+    }
+</style>
+
+<h1>Movies</h1>
+
+<p>
+    <a asp-action="Create">New</a>
+</p>
+
+<div class="grid">
+    <div class="header">
+        @Html.DisplayNameFor(m => Model.First().Title)
+    </div>
+    <div class="header">
+        @Html.DisplayNameFor(m => Model.First().Price)
+    </div>
+    <div class="header">
+        @Html.DisplayNameFor(m => Model.First().IMDBRating)
+    </div>
+    <div class="header">
+        @Html.DisplayNameFor(m => Model.First().Genre)
+    </div>
+    <div class="header">
+
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div>
+            @Html.DisplayFor(m => item.Title)
+        </div>
+        <div>
+            @Html.DisplayFor(m => item.Price)
+        </div>
+        <div>
+            @Html.DisplayFor(m => item.IMDBRating)
+        </div>
+        <div>
+            @Html.DisplayFor(m => item.Genre)
+        </div>
+        <div>
+            <a role="button" class="btn btn-outline-dark" asp-action="Details" asp-route-id="@item.Id">Details</a>
+            <a role="button" class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+        </div>
+    }
+</div>
