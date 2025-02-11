@@ -3,13 +3,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DemoMvcApp.Models
 {
-    public class CreateRecipesViewModel : RecipesViewModel
+    public class CreateRecipesViewModel
     {
         [Required]
         public string Name { get; set; }
 
-        public string[]? Ingredients { get; set; }
-        public string[]? Instructions { get; set; }
+        public string? Ingredients { get; set; }
+
+        public string? Instructions { get; set; }
 
         [Display(Name = "Preperation time in minutes")]
         [Range(0, 120, ErrorMessage = "Preperation time should be between 0 and 120 minutes")]
@@ -28,7 +29,7 @@ namespace DemoMvcApp.Models
         [Display(Name = "Calories per serving")]
         public int CaloriesPerServing { get; set; }
 
-        public string[]? Tags { get; set; }
+        public string? Tags { get; set; }
 
         public string ImageUrl { get; set; }
 

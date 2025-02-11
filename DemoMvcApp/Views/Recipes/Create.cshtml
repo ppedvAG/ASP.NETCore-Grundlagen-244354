@@ -17,6 +17,23 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredients" class="control-label">Ingredients</label>
+                <textarea asp-for="Ingredients" class="form-control">
+                </textarea>
+                <span asp-validation-for="Ingredients" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Instructions" class="control-label">Instructions</label>
+                <textarea asp-for="Instructions" class="form-control">
+                </textarea>
+                <span asp-validation-for="Instructions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="PrepTimeMinutes" class="control-label">Prep time in minutes</label>
                 <input asp-for="PrepTimeMinutes" class="form-control" />
                 <span asp-validation-for="PrepTimeMinutes" class="text-danger"></span>
@@ -49,26 +66,26 @@
                 <span asp-validation-for="Cuisine" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Tags" class="control-label"></label>
+                <input asp-for="Tags" class="form-control" placeholder="Comma separated list" />
+                <span asp-validation-for="Tags" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="CaloriesPerServing" class="control-label"></label>
                 <input asp-for="CaloriesPerServing" class="form-control" />
                 <span asp-validation-for="CaloriesPerServing" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImageUrl" class="control-label"></label>
-                <input asp-for="ImageUrl" class="form-control" />
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                <label asp-for="MealType" class="control-label"></label>
+                <select asp-for="MealType" class="form-control"
+                        asp-items="@Html.GetEnumSelectList<MealType>()">
+                </select>
+                <span asp-validation-for="MealType" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Rating" class="control-label"></label>
                 <input asp-for="Rating" class="form-control" />
                 <span asp-validation-for="Rating" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MealType" class="control-label"></label>
-                <select asp-for="MealType" class="form-control"
-                    asp-items="@Html.GetEnumSelectList<MealType>()">
-                </select>
-                <span asp-validation-for="MealType" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
