@@ -31,7 +31,7 @@ namespace LabMvcApp.Controllers
         // GET: MoviesController/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new CreateMovieViewModel());
         }
 
         // POST: MoviesController/Create
