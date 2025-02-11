@@ -42,6 +42,7 @@ Kurs Repository zum Kurs ASP.NET Core Grundkurs der ppedv AG.
 -   [x] [Hoppscotch](https://hoppscotch.io/) (Postman Alternative)
 -   [x] API mit [httpFile testen](https://learn.microsoft.com/de-de/aspnet/core/test/http-files?view=aspnetcore-8.0)
 -   [x] Api-Key mittels Middleware abfragen
+-   [x] Lab: Request Culture Middleware
 
 ## M007 | HttpClient verwenden
 
