@@ -6,6 +6,8 @@ namespace BusinessModel.Data
 {
     public class Seed
     {
+        public const int OrderIdOne = 1;
+
         public static void SeedData(ModelBuilder modelBuilder) 
         {
             var recipes = RecipeReader.FromJsonFile();
@@ -34,7 +36,7 @@ namespace BusinessModel.Data
             {
                 new Order
                 {
-                    Id = 1,
+                    Id = OrderIdOne,
                     UserName = "John Doe",
                     OrderDate = DateTime.Now,
                     Rating = 6.8f,

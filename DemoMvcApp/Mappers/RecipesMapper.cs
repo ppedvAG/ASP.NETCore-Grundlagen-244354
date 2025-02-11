@@ -59,10 +59,12 @@ namespace DemoMvcApp.Mappers
             return new Recipe
             {
                 Name = model.Name,
-                ImageUrl = model.ImageUrl,
+                ImageUrl = model.ImageUrl ?? string.Empty,
                 Ingredients = model.Ingredients?.Split(Environment.NewLine) ?? [],
                 Instructions = model.Instructions?.Split(Environment.NewLine) ?? [],
                 Rating = model.Rating,
+                Cuisine = model.Cuisine,
+                Servings = model.Servings,
                 CaloriesPerServing = model.CaloriesPerServing,
                 CookTimeMinutes = model.CookTimeMinutes,
                 PrepTimeMinutes = model.PrepTimeMinutes,

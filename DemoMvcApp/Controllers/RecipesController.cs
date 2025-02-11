@@ -22,7 +22,7 @@ namespace DemoMvcApp.Controllers
         public async Task<ActionResult<IEnumerable<RecipesViewModel>>> Index()
         {
             var model = await recipeService.GetAll();
-            return View(model.Take(10).Select(e => e.ToViewModel()));
+            return View(model.Select(e => e.ToViewModel()));
         }
 
         // GET: RecipesController/Details/5
