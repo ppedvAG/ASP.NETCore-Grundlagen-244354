@@ -46,10 +46,10 @@ Kurs Repository zum Kurs ASP.NET Core Grundkurs der ppedv AG.
 
 ## M007 | HttpClient verwenden
 
--   [ ] Konfiguration auslesen
--   [ ] HttpClient verwenden
--   [ ] MultipartFormDataContent
--   [ ] HttpContext, Request, Response
+-   [x] Konfiguration auslesen
+-   [x] HttpClient verwenden
+-   [x] MultipartFormDataContent
+-   [x] HttpContext, Request, Response
 
 ## M008 | Entity Framework Code First
 

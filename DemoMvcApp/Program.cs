@@ -10,6 +10,12 @@ namespace DemoMvcApp
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddSingleton<IRecipeService, SimpleRecipeService>();
+            builder.Services.AddTransient<IFileService, RemoteFileService>();
+
+            // Wir mappen die Einstellungen aus der appsettings.json nach FileServiceOptions
+            var fileConfig = builder.Configuration.GetSection("FileServer");
+            builder.Services.Configure<FileServiceOptions>(fileConfig);
+            builder.Services.AddHttpClient();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

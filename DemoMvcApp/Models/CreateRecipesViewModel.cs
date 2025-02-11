@@ -8,6 +8,10 @@ namespace DemoMvcApp.Models
         [Required]
         public string Name { get; set; }
 
+        public IFormFile? Image { get; set; }
+
+        public string? ImageUrl { get; set; }
+
         public string? Ingredients { get; set; }
 
         public string? Instructions { get; set; }
@@ -30,8 +34,6 @@ namespace DemoMvcApp.Models
         public int CaloriesPerServing { get; set; }
 
         public string? Tags { get; set; }
-
-        public string ImageUrl { get; set; }
 
         public float Rating { get; set; }
 

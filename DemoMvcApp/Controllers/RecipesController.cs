@@ -1,8 +1,6 @@
 ﻿using BusinessModel.Contracts;
-using BusinessModel.Models;
 using DemoMvcApp.Mappers;
 using DemoMvcApp.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoMvcApp.Controllers
@@ -10,11 +8,13 @@ namespace DemoMvcApp.Controllers
     public class RecipesController : Controller
     {
         private readonly IRecipeService recipeService;
+        private readonly IFileService fileService;
         private readonly ILogger<RecipesController> logger;
 
-        public RecipesController(IRecipeService recipeService, ILogger<RecipesController> logger)
+        public RecipesController(IRecipeService recipeService, IFileService fileService, ILogger<RecipesController> logger)
         {
             this.recipeService = recipeService;
+            this.fileService = fileService;
             this.logger = logger;
         }
 
@@ -41,8 +41,10 @@ namespace DemoMvcApp.Controllers
         // POST: RecipesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateRecipesViewModel model)
+        public async Task<ActionResult> Create(CreateRecipesViewModel model)
         {
+            model.ImageUrl = await UploadFile(model.Image);
+
             if (ModelState.IsValid)
             {
                 try
@@ -63,6 +65,26 @@ namespace DemoMvcApp.Controllers
             }
 
             return View(model);
+        }
+
+        private async Task<string?> UploadFile(IFormFile? file)
+        {
+            if (file != null)
+            {
+                using var stream = file.OpenReadStream();
+
+                try
+                {
+                    return await fileService.UploadFile(file.FileName, stream);
+                }
+                catch (Exception ex)
+                {
+                    logger.LogError("File could not be uploaded: " + ex.Message);
+                    ModelState.AddModelError(nameof(CreateRecipesViewModel.Image), ex.Message);
+                }
+            }
+
+            return string.Empty;
         }
 
         // GET: RecipesController/Edit/5

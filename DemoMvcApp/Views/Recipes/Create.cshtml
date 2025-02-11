@@ -9,7 +9,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post" asp-action="Create">
+        <form method="post" asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label">Name</label>
@@ -17,9 +17,9 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImageUrl" class="control-label"></label>
-                <input asp-for="ImageUrl" class="form-control" />
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" type="file" />
+                <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Ingredients" class="control-label">Ingredients</label>
@@ -36,11 +36,11 @@
             <div class="form-group">
                 <label asp-for="PrepTimeMinutes" class="control-label">Prep time in minutes</label>
                 <input asp-for="PrepTimeMinutes" class="form-control" />
-                <span asp-validation-for="PrepTimeMinutes" class="text-danger"></span>
+                <span asp-validation-for="PrepTimeMinutes" class="text-danger" type="number"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CookTimeMinutes" class="control-label">Cook time in minutes</label>
-                <input asp-for="CookTimeMinutes" class="form-control" />
+                <input asp-for="CookTimeMinutes" class="form-control" type="number" />
                 <span asp-validation-for="CookTimeMinutes" class="text-danger"></span>
             </div>
             <div class="form-group">
