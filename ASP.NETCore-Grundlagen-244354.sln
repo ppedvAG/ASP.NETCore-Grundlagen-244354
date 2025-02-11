@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greeter", "Greeter\Greeter.csproj", "{25558FC9-E80B-4DA5-8D34-2C3887DAEF65}"
 EndProject
@@ -28,6 +28,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M003-MvcApp", "M003-MvcApp", "{5B32A8E3-9FC1-4B95-BECC-F208CC83637A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabMvcApp", "LabMvcApp\LabMvcApp.csproj", "{9B1DF3D0-F205-48C5-B50D-48F4AE1F2A80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M006-FileServer", "M006-FileServer", "{412B589E-BEC7-4872-B81D-48D6CF7B5B34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileServer", "FileServer\FileServer.csproj", "{DC2A0063-13B6-438A-8B67-0825B35EDF7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,10 @@ Global
 		{9B1DF3D0-F205-48C5-B50D-48F4AE1F2A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B1DF3D0-F205-48C5-B50D-48F4AE1F2A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B1DF3D0-F205-48C5-B50D-48F4AE1F2A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2A0063-13B6-438A-8B67-0825B35EDF7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2A0063-13B6-438A-8B67-0825B35EDF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2A0063-13B6-438A-8B67-0825B35EDF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2A0063-13B6-438A-8B67-0825B35EDF7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +93,6 @@ Global
 		{57A11939-D17D-4436-99C0-EB36F79A52CF} = {5B32A8E3-9FC1-4B95-BECC-F208CC83637A}
 		{B974524A-0D82-4952-A5F7-5A72A476C723} = {5B32A8E3-9FC1-4B95-BECC-F208CC83637A}
 		{9B1DF3D0-F205-48C5-B50D-48F4AE1F2A80} = {5B32A8E3-9FC1-4B95-BECC-F208CC83637A}
+		{DC2A0063-13B6-438A-8B67-0825B35EDF7B} = {412B589E-BEC7-4872-B81D-48D6CF7B5B34}
 	EndGlobalSection
 EndGlobal

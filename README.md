@@ -12,13 +12,15 @@ Kurs Repository zum Kurs ASP.NET Core Grundkurs der ppedv AG.
 
 -   [x] IOC mittels Dependency Injection
 -   [x] Aufbau appsettings.json
--   [x] Logging in ASP.NET Core
+-   [x] Logging mit Serilog und Filesink
+-   [x] Lab: Dependency Injection OperationService
 
 ## M003 | Model View Controller (MVC)
 
 -   [x] Overview
 -   [x] Links setzen
--   [x] Details
+-   [x] Index und Details
+-   [x] Lab: MovieService und MVC App mit Index und Details
 
 ## M004 | Razor Pages
 
@@ -31,14 +33,15 @@ Kurs Repository zum Kurs ASP.NET Core Grundkurs der ppedv AG.
 -   [x] ViewModel Mapping
 -   [x] Form Post & Validierung
 -   [x] ModelState
+-   [x] Lab: Create Page für Movies erstellt
 
 ## M006 | FileServer erstellen
 
--   [ ] Static Files und Directory Browser
--   [ ] File Provider und Dateizugriff
--   [ ] [Hoppscotch](https://hoppscotch.io/) (Postman Alternative)
--   [ ] API mit [httpFile testen](https://learn.microsoft.com/de-de/aspnet/core/test/http-files?view=aspnetcore-8.0)
--   [ ] Middleware
+-   [x] Static Files und Directory Browser
+-   [x] File Provider und Dateizugriff
+-   [x] [Hoppscotch](https://hoppscotch.io/) (Postman Alternative)
+-   [x] API mit [httpFile testen](https://learn.microsoft.com/de-de/aspnet/core/test/http-files?view=aspnetcore-8.0)
+-   [x] Api-Key mittels Middleware abfragen
 
 ## M007 | HttpClient verwenden
 
@@ -85,4 +88,4 @@ Update-Database
 -   [ ] Lokalisierung
 -   [ ] Cookie Handling
 -   [ ] Server Caching
--   [ ] Deployment IIS Server
+-   [ ] Deployment 
