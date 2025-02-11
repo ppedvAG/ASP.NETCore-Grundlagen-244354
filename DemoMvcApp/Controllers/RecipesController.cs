@@ -7,11 +7,11 @@ namespace DemoMvcApp.Controllers
 {
     public class RecipesController : Controller
     {
-        private readonly IRecipeService recipeService;
+        private readonly IRecipeServiceAsync recipeService;
         private readonly IFileService fileService;
         private readonly ILogger<RecipesController> logger;
 
-        public RecipesController(IRecipeService recipeService, IFileService fileService, ILogger<RecipesController> logger)
+        public RecipesController(IRecipeServiceAsync recipeService, IFileService fileService, ILogger<RecipesController> logger)
         {
             this.recipeService = recipeService;
             this.fileService = fileService;
@@ -19,16 +19,16 @@ namespace DemoMvcApp.Controllers
         }
 
         // GET: RecipesController
-        public ActionResult<IEnumerable<RecipesViewModel>> Index()
+        public async Task<ActionResult<IEnumerable<RecipesViewModel>>> Index()
         {
-            var model = recipeService.GetAll().Select(e => e.ToViewModel());
-            return View(model.Take(10));
+            var model = await recipeService.GetAll();
+            return View(model.Take(10).Select(e => e.ToViewModel()));
         }
 
         // GET: RecipesController/Details/5
-        public ActionResult<RecipesViewModel> Details(int id)
+        public async Task<ActionResult<RecipesViewModel>> Details(int id)
         {
-            var model = recipeService.GetById(id);
+            var model = await recipeService.GetById(id);
             return View(model?.ToViewModel());
         }
 
@@ -49,7 +49,7 @@ namespace DemoMvcApp.Controllers
             {
                 try
                 {
-                    recipeService.Add(model.ToDomainModel());
+                    await recipeService.Add(model.ToDomainModel());
                     return RedirectToAction(nameof(Index));
                 }
                 catch (Exception ex)

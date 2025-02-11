@@ -1,4 +1,5 @@
 using BusinessModel.Contracts;
+using BusinessModel.Data;
 using BusinessModel.Services;
 
 namespace DemoMvcApp
@@ -9,13 +10,16 @@ namespace DemoMvcApp
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddSingleton<IRecipeService, SimpleRecipeService>();
+            builder.Services.AddTransient<IRecipeServiceAsync, RecipeService>();
             builder.Services.AddTransient<IFileService, RemoteFileService>();
 
             // Wir mappen die Einstellungen aus der appsettings.json nach FileServiceOptions
             var fileConfig = builder.Configuration.GetSection("FileServer");
             builder.Services.Configure<FileServiceOptions>(fileConfig);
             builder.Services.AddHttpClient();
+
+            var connectionString = builder.Configuration.GetConnectionString("Default");
+            builder.Services.AddSqlServer<DeliveryDbContext>(connectionString);
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

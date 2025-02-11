@@ -1,52 +1,58 @@
 ﻿using BusinessModel.Contracts;
 using BusinessModel.Data;
 using BusinessModel.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusinessModel.Services
 {
-    /// <summary>
-    /// Service welcher den Datenbankzugriff abbilden soll, vgl. <see cref="https://de.wikipedia.org/wiki/Repository_(Entwurfsmuster)"/>
-    /// Dieser Service bildet CRUD Operationen auf die Rezepte ab.
-    /// </summary>
-    public class SimpleRecipeService : IRecipeService
+    public class RecipeService : IRecipeServiceAsync
     {
-        private readonly List<Recipe> _recipes = RecipeReader.FromJsonFile() ?? new List<Recipe>();
+        private readonly DeliveryDbContext _context;
 
-        public List<Recipe> GetAll()
+        public RecipeService(DeliveryDbContext context)
         {
-            return _recipes;
+            _context = context;
         }
 
-        public Recipe? GetById(int id)
+        public async Task<List<Recipe>> GetAll()
         {
-            return _recipes.SingleOrDefault(r => r.Id == id);
+            return await _context.Recipes.ToListAsync();
         }
 
-        public void Add(Recipe recipe)
+        public async Task<Recipe?> GetById(int id)
         {
-            _recipes.Insert(0, recipe);
+            return await _context.Recipes.FindAsync(id);
         }
 
-        public bool Update(Recipe recipe)
+        public async Task Add(Recipe recipe)
         {
-            var index = _recipes.FindIndex(r => r.Id == recipe.Id);
-            if (index > 0)
+            await _context.Recipes.AddAsync(recipe);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<bool> Update(Recipe recipe)
+        {
+            var existingRecipe = await _context.Recipes.FindAsync(recipe.Id);
+            if (existingRecipe != null)
             {
-                _recipes[index] = recipe;
+                _context.Entry(existingRecipe).CurrentValues.SetValues(recipe);
+                await _context.SaveChangesAsync();
                 return true;
             }
             return false;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            var index = _recipes.FindIndex(r => r.Id == id);
-            if (index > 0)
+            var recipe = await _context.Recipes.FindAsync(id);
+            if (recipe != null)
             {
-                _recipes.RemoveAt(index);
+                _context.Recipes.Remove(recipe);
+                await _context.SaveChangesAsync();
                 return true;
             }
             return false;
         }
     }
+
 }

@@ -53,10 +53,12 @@ Kurs Repository zum Kurs ASP.NET Core Grundkurs der ppedv AG.
 
 ## M008 | Entity Framework Code First
 
--   [ ] O/R Mapping Framework EFCore
--   [ ] Code First Ansatz (Entites + DbContext)
--   [ ] LocalDB
--   [ ] DB Migration
+-   [x] O/R Mapping Framework EFCore
+-   [x] Code First Ansatz (Entites + DbContext)
+-   [x] LocalDB verwenden (Kommandozeile: `sqllocaldb create|start|stop|info <instanceName>`)
+-   [x] [Testing Strategien gegen Datenbank](https://learn.microsoft.com/de-de/ef/core/testing/)
+-   [x] Seed erstellen und Abhängigkeiten modellieren
+-   [x] DB Migration 
 
 ```bash
 // Package Manager Console aufrufen
