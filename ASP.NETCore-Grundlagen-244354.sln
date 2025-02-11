@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileServer", "FileServer\Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabCultureMiddleware", "LabCultureMiddleware\LabCultureMiddleware.csproj", "{B06B7F8B-7997-45EF-A653-21DA832D1BBA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M004+M009-RazorPagesNorthwind", "M004+M009-RazorPagesNorthwind", "{F3D9BFBD-7D1F-46E2-8672-E99BC176EE74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWebApp", "NorthwindWebApp\NorthwindWebApp.csproj", "{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,10 @@ Global
 		{B06B7F8B-7997-45EF-A653-21DA832D1BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B06B7F8B-7997-45EF-A653-21DA832D1BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B06B7F8B-7997-45EF-A653-21DA832D1BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,5 +109,6 @@ Global
 		{9B1DF3D0-F205-48C5-B50D-48F4AE1F2A80} = {5B32A8E3-9FC1-4B95-BECC-F208CC83637A}
 		{DC2A0063-13B6-438A-8B67-0825B35EDF7B} = {412B589E-BEC7-4872-B81D-48D6CF7B5B34}
 		{B06B7F8B-7997-45EF-A653-21DA832D1BBA} = {412B589E-BEC7-4872-B81D-48D6CF7B5B34}
+		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96} = {F3D9BFBD-7D1F-46E2-8672-E99BC176EE74}
 	EndGlobalSection
 EndGlobal
