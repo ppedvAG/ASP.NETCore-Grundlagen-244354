@@ -70,7 +70,8 @@ Update-Database
 ```
 
 -   [x] Unit Tests mit EntityFramework
--   [ ] OrderService anhand von Tests entwickeln
+-   [x] OrderService anhand von Tests entwickeln
+-   [x] Dashboard fuer aktuelle Orders anzeigen
 
 ## M009 | Entity Framework DB First
 

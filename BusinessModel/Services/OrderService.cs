@@ -1,11 +1,12 @@
 ﻿using BusinessLogic.Models.Enums;
+using BusinessModel.Contracts;
 using BusinessModel.Data;
 using BusinessModel.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BusinessModel.Services
 {
-    public class OrderService
+    public class OrderService : IOrderServiceAsync
     {
         private readonly DeliveryDbContext _context;
 

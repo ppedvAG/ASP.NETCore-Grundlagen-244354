@@ -11,6 +11,7 @@ namespace DemoMvcApp
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddTransient<IRecipeServiceAsync, RecipeService>();
+            builder.Services.AddTransient<IOrderServiceAsync, OrderService>();
             builder.Services.AddTransient<IFileService, RemoteFileService>();
 
             // Wir mappen die Einstellungen aus der appsettings.json nach FileServiceOptions
