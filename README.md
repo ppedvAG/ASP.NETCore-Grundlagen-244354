@@ -82,15 +82,17 @@ Update-Database
 
 ## M010 | Benutzerverwaltung
 
--   [ ] AspNetCore.Identity.EFCore
--   [ ] CodeFirst & Migration
--   [ ] UserManager & SignInManager
--   [ ] Form Post & Validierung
+-   [x] AspNetCore.Identity.EFCore
+-   [x] CodeFirst & Migration
+-   [x] UserManager & SignInManager
+-   [x] Form Post & Validierung
 -   [ ] MS Identity Platform gegen EntraId und GraphAPI
 
 ## M011 | Weitere Themen
 
+-   [ ] Paging
 -   [ ] Lokalisierung
+-   [ ] WebAPI
 -   [ ] Cookie Handling
 -   [ ] Server Caching
 -   [ ] Deployment 

@@ -1,6 +1,7 @@
 using BusinessModel.Contracts;
 using BusinessModel.Data;
 using BusinessModel.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace DemoMvcApp
 {
@@ -22,6 +23,12 @@ namespace DemoMvcApp
             var connectionString = builder.Configuration.GetConnectionString("Default");
             builder.Services.AddSqlServer<DeliveryDbContext>(connectionString);
 
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+            }).AddEntityFrameworkStores<DeliveryDbContext>();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -41,10 +48,11 @@ namespace DemoMvcApp
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }

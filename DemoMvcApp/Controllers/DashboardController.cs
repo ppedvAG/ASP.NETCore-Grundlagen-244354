@@ -15,7 +15,7 @@ namespace DemoMvcApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            string userName = "John Doe";
+            string userName = User.Identity.Name ?? "Guest";
             var model = new DashboardViewModel
             {
                 UserName = userName,

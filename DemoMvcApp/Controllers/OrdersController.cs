@@ -8,6 +8,8 @@ namespace DemoMvcApp.Controllers
         private readonly IOrderServiceAsync orderService;
         private readonly IRecipeServiceAsync recipeService;
 
+        public string UserName => User.Identity.Name ?? "Guest";
+
         public OrdersController(IOrderServiceAsync orderService, IRecipeServiceAsync recipeService)
         {
             this.orderService = orderService;
@@ -22,10 +24,8 @@ namespace DemoMvcApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Order(int recipeId, int quantity)
         {
-            var userName = "John Doe";
-
             var recipe = await recipeService.GetById(recipeId);
-            await orderService.UpdateOrder(userName, recipe, quantity);
+            await orderService.UpdateOrder(UserName, recipe, quantity);
 
             return RedirectToAction("Index", "Recipes");
         }
@@ -33,9 +33,7 @@ namespace DemoMvcApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Done(IFormCollection form)
         {
-            var userName = "John Doe";
-
-            await orderService.FinishOrder(userName);
+            await orderService.FinishOrder(UserName);
 
             return RedirectToAction("Index", "Dashboard");
         }

@@ -1,9 +1,10 @@
 ﻿using BusinessModel.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BusinessModel.Data
 {
-    public class DeliveryDbContext : DbContext
+    public class DeliveryDbContext : IdentityDbContext
     {
         public DbSet<Order> Orders { get; set; }
 
@@ -23,6 +24,7 @@ namespace BusinessModel.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            Seed.SeedIdentity(modelBuilder);
 
             modelBuilder.Entity<Recipe>()
                 .Property(o => o.Ingredients)
