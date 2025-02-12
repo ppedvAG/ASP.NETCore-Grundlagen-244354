@@ -46,7 +46,7 @@ namespace BusinessModel.Services
             }
             else
             {
-                throw new InvalidOperationException(response.ReasonPhrase);
+                throw new RemoteUploadFileException(response.ReasonPhrase);
             }
         }
     }

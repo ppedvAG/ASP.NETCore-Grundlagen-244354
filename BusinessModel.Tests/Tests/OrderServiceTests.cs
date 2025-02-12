@@ -1,7 +1,9 @@
 ﻿using BusinessLogic.Models.Enums;
+using BusinessModel.Contracts;
 using BusinessModel.Data;
 using BusinessModel.Services;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 
 namespace BusinessModel.Tests.Tests
 {
@@ -66,7 +68,7 @@ namespace BusinessModel.Tests.Tests
         public async Task UpdateOrder_AddSingleOrder_CreatesSingleOrderItem(string userName, int recipeId, int quantity)
         {
             // Arrange
-            var recipeService = new RecipeService(_context);
+            var recipeService = new RecipeService(_context, Mock.Of<IFileService>());
             var orderService = new OrderService(_context);
 
             // Act

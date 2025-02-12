@@ -8,10 +8,12 @@ namespace BusinessModel.Services
     public class RecipeService : IRecipeServiceAsync
     {
         private readonly DeliveryDbContext _context;
+        private readonly IFileService _fileService;
 
-        public RecipeService(DeliveryDbContext context)
+        public RecipeService(DeliveryDbContext context, IFileService fileService)
         {
             _context = context;
+            _fileService = fileService;
         }
 
         public async Task<PaginatedList<Recipe>> GetAll(int pageIndex = 1, int pageSize = 20)
@@ -37,6 +39,12 @@ namespace BusinessModel.Services
         {
             await _context.Recipes.AddAsync(recipe);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task AddWithImage(Recipe recipe, Stream stream, string fileName)
+        {
+            recipe.ImageUrl = await _fileService.UploadFile(fileName, stream);
+            await Add(recipe);
         }
 
         public async Task<bool> Update(Recipe recipe)
