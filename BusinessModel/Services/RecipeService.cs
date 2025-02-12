@@ -14,9 +14,18 @@ namespace BusinessModel.Services
             _context = context;
         }
 
-        public async Task<List<Recipe>> GetAll()
+        public async Task<PaginatedList<Recipe>> GetAll(int pageIndex = 1, int pageSize = 20)
         {
-            return await _context.Recipes.ToListAsync();
+            var count = await _context.Recipes.CountAsync();
+            var items = await _context.Recipes
+                .Skip((pageIndex - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return new PaginatedList<Recipe>(items, count, pageSize)
+            {
+                PageIndex = pageIndex
+            };
         }
 
         public async Task<Recipe?> GetById(int id)

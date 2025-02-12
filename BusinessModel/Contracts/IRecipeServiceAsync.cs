@@ -6,7 +6,7 @@ namespace BusinessModel.Contracts
     {
         Task Add(Recipe recipe);
         Task<bool> Delete(int id);
-        Task<List<Recipe>> GetAll();
+        Task<PaginatedList<Recipe>> GetAll(int pageIndex, int pageSize = 20);
         Task<Recipe?> GetById(int id);
         Task<bool> Update(Recipe recipe);
     }

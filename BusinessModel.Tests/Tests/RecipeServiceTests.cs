@@ -43,6 +43,25 @@ namespace BusinessModel.Tests.Tests
         }
 
         [TestMethod]
+        public async Task GetAll_SecondPage_ReturnsListOfRecipes()
+        {
+            // Arrange
+            int pageIndex = 2;
+            int pageSize = 10;
+            int expectedRecipeId = 11;
+            using var context = new TestDatabase().Context;
+            var recipeService = new RecipeService(context);
+
+            // Act
+            var result = await recipeService.GetAll(pageIndex, pageSize);
+
+            // Assert
+            Assert.IsNotNull(result, "Die Liste mit Rezepten sollte nicht null sein.");
+            Assert.AreEqual(pageSize, result.Count, "Die Liste mit Rezepten sollte 10 Items haben.");
+            Assert.AreEqual(expectedRecipeId, result[0].Id, $"Die RecipeId sollte {expectedRecipeId} sein.");
+        }
+
+        [TestMethod]
         public async Task GetById_ExistingId_ReturnsRecipe()
         {
             // Arrange

@@ -1,4 +1,5 @@
 ﻿using BusinessModel.Contracts;
+using BusinessModel.Models;
 using DemoMvcApp.Mappers;
 using DemoMvcApp.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -19,10 +20,10 @@ namespace DemoMvcApp.Controllers
         }
 
         // GET: RecipesController
-        public async Task<ActionResult<IEnumerable<RecipesViewModel>>> Index()
+        public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 12)
         {
-            var model = await recipeService.GetAll();
-            return View(model.Select(e => e.ToViewModel()));
+            var paginatedList = await recipeService.GetAll(pageNumber, pageSize);
+            return View(paginatedList.Select(e => e.ToViewModel()));
         }
 
         // GET: RecipesController/Details/5

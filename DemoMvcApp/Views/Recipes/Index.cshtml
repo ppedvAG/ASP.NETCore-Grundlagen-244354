@@ -1,8 +1,41 @@
-﻿@model IEnumerable<RecipesViewModel>
+﻿@using BusinessModel.Models
+
+@model PaginatedList<RecipesViewModel>
 
 @{
     ViewData["Title"] = "Recipes";
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
+
+<h2>Recipe Overview</h2>
+
+<p style="text-align: center">
+    <a role="button" class="btn btn-default"
+       asp-action="Index" 
+       asp-route-pageNumber="1"
+       asp-route-pageSize="12">
+        |&lt; First
+    </a>
+    <a role="button" class="btn btn-default @prevDisabled"
+       asp-action="Index"
+       asp-route-pageNumber="@(Model.PageIndex - 1)"
+       asp-route-pageSize="12">
+        &lt;&lt; Previous
+    </a>
+    <a role="button" class="btn btn-default @nextDisabled"
+       asp-action="Index"
+       asp-route-pageNumber="@(Model.PageIndex + 1)"
+       asp-route-pageSize="12">
+        Next &gt;&gt;
+    </a>
+    <a role="button" class="btn btn-default"
+       asp-action="Index"
+       asp-route-pageNumber="@(Model.TotalPages)"
+       asp-route-pageSize="12">
+        Last &gt;|
+    </a>
+</p>
 
 <div class="album py-5 bg-light">
     <div class="container">

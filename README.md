@@ -90,7 +90,7 @@ Update-Database
 
 ## M011 | Weitere Themen
 
--   [ ] Paging
+-   [x] Paging
 -   [ ] Lokalisierung
 -   [ ] WebAPI
 -   [ ] Cookie Handling
