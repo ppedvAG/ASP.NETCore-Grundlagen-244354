@@ -1,0 +1,72 @@
+@DemoWebApi_HostAddress = http://localhost:5277
+
+GET {{DemoWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# Get all recipes
+GET {{DemoWebApi_HostAddress}}/api/Recipes
+Accept: application/json
+
+###
+
+# Get a recipe by ID
+GET {{DemoWebApi_HostAddress}}/api/Recipes/32
+Accept: application/json
+
+###
+
+# Update a recipe
+PUT {{DemoWebApi_HostAddress}}/api/Recipes/30
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Updated Recipe",
+  "ingredients": ["Ingredient1", "Ingredient2"],
+  "instructions": ["Step1", "Step2"],
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 45,
+  "servings": 2,
+  "difficulty": "Medium",
+  "cuisine": "Italian",
+  "caloriesPerServing": 600,
+  "tags": ["Dinner", "Healthy"],
+  "userId": 1,
+  "imageUrl": "http://example.com/updated-image.jpg",
+  "rating": 4.7,
+  "reviewCount": 15,
+  "mealType": ["Dinner"]
+}
+
+###
+
+# Create a new recipe
+POST {{DemoWebApi_HostAddress}}/api/Recipes
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "New Recipe",
+  "ingredients": ["Ingredient1", "Ingredient2"],
+  "instructions": ["Step1", "Step2"],
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 30,
+  "servings": 4,
+  "difficulty": "Easy",
+  "cuisine": "Mexican",
+  "caloriesPerServing": 550,
+  "tags": ["Lunch", "Spicy"],
+  "userId": 1,
+  "imageUrl": "http://example.com/new-image.jpg",
+  "rating": 4.5,
+  "reviewCount": 5,
+  "mealType": ["Lunch"]
+}
+
+###
+
+# Delete a recipe
+DELETE {{DemoWebApi_HostAddress}}/api/Recipes/1
+Accept: application/json

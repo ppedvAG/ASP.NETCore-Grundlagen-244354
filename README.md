@@ -92,7 +92,7 @@ Update-Database
 
 -   [x] Paging
 -   [ ] Lokalisierung
--   [ ] WebAPI
+-   [x] WebAPI
 -   [ ] Cookie Handling
 -   [ ] Server Caching
 -   [ ] Deployment 

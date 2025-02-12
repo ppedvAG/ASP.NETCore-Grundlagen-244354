@@ -3,41 +3,45 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greeter", "Greeter\Greeter.csproj", "{25558FC9-E80B-4DA5-8D34-2C3887DAEF65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Greeter", "Greeter\Greeter.csproj", "{25558FC9-E80B-4DA5-8D34-2C3887DAEF65}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M001-Vorstellung", "M001-Vorstellung", "{B6E1FE27-8663-4EA8-B3F6-BA2B425C8364}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M002-Konfiguration", "M002-Konfiguration", "{72AFD062-B3D3-4BEA-8A69-542F4CC1E79A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloIoC", "HelloIoC\HelloIoC.csproj", "{5E145CFF-862E-4EE2-B0A7-97E28A41CB41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloIoC", "HelloIoC\HelloIoC.csproj", "{5E145CFF-862E-4EE2-B0A7-97E28A41CB41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloLogging", "HelloLogging\HelloLogging.csproj", "{0595EE73-9FD7-4026-9E1B-549817CA47BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloLogging", "HelloLogging\HelloLogging.csproj", "{0595EE73-9FD7-4026-9E1B-549817CA47BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabIoC", "LabIoC\LabIoC.csproj", "{2A547319-7465-4210-9F12-5CCFC5F761D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabIoC", "LabIoC\LabIoC.csproj", "{2A547319-7465-4210-9F12-5CCFC5F761D1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{D6066BFB-8681-4667-B17F-465B87CD2CDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessModel", "BusinessModel\BusinessModel.csproj", "{39B808CF-2026-402B-B92D-A23D238732A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessModel", "BusinessModel\BusinessModel.csproj", "{39B808CF-2026-402B-B92D-A23D238732A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessModel.Tests", "BusinessModel.Tests\BusinessModel.Tests.csproj", "{B949C2B9-6085-40BF-95C0-DF2C892B0661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessModel.Tests", "BusinessModel.Tests\BusinessModel.Tests.csproj", "{B949C2B9-6085-40BF-95C0-DF2C892B0661}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMvcApp", "DemoMvcApp\DemoMvcApp.csproj", "{57A11939-D17D-4436-99C0-EB36F79A52CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoMvcApp", "DemoMvcApp\DemoMvcApp.csproj", "{57A11939-D17D-4436-99C0-EB36F79A52CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabMovieStore", "LabMovieStore\LabMovieStore.csproj", "{B974524A-0D82-4952-A5F7-5A72A476C723}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabMovieStore", "LabMovieStore\LabMovieStore.csproj", "{B974524A-0D82-4952-A5F7-5A72A476C723}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M003-MvcApp", "M003-MvcApp", "{5B32A8E3-9FC1-4B95-BECC-F208CC83637A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabMvcApp", "LabMvcApp\LabMvcApp.csproj", "{9B1DF3D0-F205-48C5-B50D-48F4AE1F2A80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabMvcApp", "LabMvcApp\LabMvcApp.csproj", "{9B1DF3D0-F205-48C5-B50D-48F4AE1F2A80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M006-FileServer", "M006-FileServer", "{412B589E-BEC7-4872-B81D-48D6CF7B5B34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileServer", "FileServer\FileServer.csproj", "{DC2A0063-13B6-438A-8B67-0825B35EDF7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileServer", "FileServer\FileServer.csproj", "{DC2A0063-13B6-438A-8B67-0825B35EDF7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabCultureMiddleware", "LabCultureMiddleware\LabCultureMiddleware.csproj", "{B06B7F8B-7997-45EF-A653-21DA832D1BBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LabCultureMiddleware", "LabCultureMiddleware\LabCultureMiddleware.csproj", "{B06B7F8B-7997-45EF-A653-21DA832D1BBA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M004+M009-RazorPagesNorthwind", "M004+M009-RazorPagesNorthwind", "{F3D9BFBD-7D1F-46E2-8672-E99BC176EE74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindWebApp", "NorthwindWebApp\NorthwindWebApp.csproj", "{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindWebApp", "NorthwindWebApp\NorthwindWebApp.csproj", "{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M011-WebAPI", "M011-WebAPI", "{0A498201-3700-4242-8B4B-3C3982F4FE41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWebApi", "DemoWebApi\DemoWebApi.csproj", "{3B42ACF1-EA91-403D-B3A8-AFBB6D48D398}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +97,10 @@ Global
 		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B42ACF1-EA91-403D-B3A8-AFBB6D48D398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B42ACF1-EA91-403D-B3A8-AFBB6D48D398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B42ACF1-EA91-403D-B3A8-AFBB6D48D398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B42ACF1-EA91-403D-B3A8-AFBB6D48D398}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,5 +118,9 @@ Global
 		{DC2A0063-13B6-438A-8B67-0825B35EDF7B} = {412B589E-BEC7-4872-B81D-48D6CF7B5B34}
 		{B06B7F8B-7997-45EF-A653-21DA832D1BBA} = {412B589E-BEC7-4872-B81D-48D6CF7B5B34}
 		{C3954F89-FDAA-46F3-9E79-C9C7AC482A96} = {F3D9BFBD-7D1F-46E2-8672-E99BC176EE74}
+		{3B42ACF1-EA91-403D-B3A8-AFBB6D48D398} = {0A498201-3700-4242-8B4B-3C3982F4FE41}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90728973-0F93-4981-85C9-4B7C8B032573}
 	EndGlobalSection
 EndGlobal
