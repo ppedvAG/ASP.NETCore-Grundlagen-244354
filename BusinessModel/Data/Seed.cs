@@ -6,7 +6,12 @@ namespace BusinessModel.Data
 {
     public class Seed
     {
-        public const int OrderIdOne = 1;
+        public const int DEFAULT_ORDER_ID = 1;
+        public const int DEFAULT_RECIPE_ID = 1;
+        public const int FIRST_ORDERITEM_RECIPE_ID = DEFAULT_RECIPE_ID;
+        public const int FIRST_ORDERITEM_QUANTITY = 2;
+        public const int FIRST_ORDERITEM_RATING = 5;
+        public const string DEFAULT_USER_NAME = "John Doe";
 
         public static void SeedData(ModelBuilder modelBuilder) 
         {
@@ -17,10 +22,10 @@ namespace BusinessModel.Data
                 new OrderItem
                 {
                     Id = 1,
-                    RecipeId = 1,
+                    RecipeId = FIRST_ORDERITEM_RECIPE_ID,
                     OrderId = 1,
-                    Quantity = 2,
-                    Rating = 5
+                    Quantity = FIRST_ORDERITEM_QUANTITY,
+                    Rating = FIRST_ORDERITEM_RATING
                 },
                 new OrderItem
                 {
@@ -36,8 +41,8 @@ namespace BusinessModel.Data
             {
                 new Order
                 {
-                    Id = OrderIdOne,
-                    UserName = "John Doe",
+                    Id = DEFAULT_ORDER_ID,
+                    UserName = DEFAULT_USER_NAME,
                     OrderDate = DateTime.Now,
                     Rating = 6.8f,
                     Status = OrderStatus.Pending
